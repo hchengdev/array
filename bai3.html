@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let value = +prompt("Enter a number: ");
+    let numbers = [-3, 5, 1, 3, 2, 10];
+    let found = false;
+
+    let a = numbers.forEach((ele, index) => {
+        if (ele ===value) {
+            alert("Value " + value + " found at " + index);
+            let found = true;
+        } 
+    })
+    if(!found) {
+        alert("Value " + value + " not found");
+        }
+</script>
+</html>
