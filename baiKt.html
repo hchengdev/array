@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lí thuyết -->
+    1. Các cách khai báo biến: Let, Var, Const
+    2. Các kiểu dữ liệu: String, Number, Boolean, Array, Object, undefined, Symbol, đối tượng, ...
+    3. Để quy định kiểu dữ liệu cho một biến ta gán cho biến đấy một giá trị có kiểu dữ liệu mong muốn
+    4. Các cách để hiển thị chữ hello: document.write('hello'), console.log('hello'), alert('hello'), innerHTMl, textContent
+    5. Những cách để nhập vào biến a: gán trực tiếp và gán gián tiếp
+    <div id="a"></div>
+    <h1 id="h1"></h1>
+    <img src="" alt="">
+<script>
+    // 6. In ra thẻ h1, img, a với JS:
+    // document.getElementById('a').innerHTML = '<a href="">abc</a> <h1>Thẻ h1</h1> <img src="data:image/jpeg;base64,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"></img>'
+
+    // 7. Nhập vào tên, in ra tên
+    // let name = 'hcheng'
+    // document.write(name)
+
+    // 8.Nhập vào a, in ra bình phương của a:
+    // let a = 4
+    // document.write(a*a)
+
+    // 9. Nhập vào tên, in ra tên với h1
+    // let a = 'hcheng'
+    // document.getElementById('h1').textContent = a
+
+    // 10. Nhập vào đường dẫn cho biến src, in ra ảnh với nguồn ảnh là biến src
+    // let src = 'https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-6/441513012_502625758759508_8862147840668930738_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEiE2s_zbmERDo1N5wvSfYZ-ix01g6erc36LHTWDp6tzag_V9o7cXXMGJAzh8JofdLulruZHHu4t4W3-j9DY8gs&_nc_ohc=CBTV3lodzkcQ7kNvgECJ5v8&_nc_ht=scontent.fhan17-1.fna&oh=00_AYDLEWjKNxlLzhOlX2tgNrvhq2mFpieOKvSHCjyuopup-A&oe=6651C70F'
+    //         let img = document.createElement('img');
+    //         img.src = src;
+    //         let container = document.getElementById('a');
+    //         container.innerHTML = img;
+    //         container.innerHTML = '';
+
+    //         container.appendChild(img);
+
+    // 11. Nhập vào tuổi trong biến age, in ra 'Đủ tuổi' nếu age>18
+    // let age = +prompt('Nhap tuoi:')
+    // if(age > 18) {
+    //     alert('Đủ tuổi')
+    // }
+
+    // 12. Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ
+    // let num = +prompt('Nhap so:')
+    // if(num%2===0) {
+    //     document.write('Hello')
+    // } else {
+    //     document.write('Hi')
+    // }
+
+    // 13. Nhập vào a, b. Nếu a>b in ra tổng, nếu a<b in ra tích, nếu a =b in ra 'Hihi'
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+
+    // if (a>b) {
+    //     document.write(a+b)
+    // } else if ( a === b) {
+    //     document.write('Hihi')
+    // } else {
+    //     document.write(a*b)
+    // }
+    
+    // 14. Nhập a,b,c. In ra số lớn nhất
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+    // let c = +prompt('Nhap c:')
+
+    // let largest = Math.max(a, b, c);
+    // document.write(largest)
+
+    // 15. In ra 100 chữ 'Hello'
+    // for (i = 0; i < 100; i++) {
+    //     document.write('Hello' + '<br>')
+    // }
+
+    // 16. Nhập vào N từ prompt. In ra N lần chữ 'Hello'
+    // let N = +prompt('Nhap so lan: ')
+    // for(i = 0; i < N; i++) {
+    //     document.write('Hello' + '<br>')
+    // }
+
+    // 17. In ra cac số từ 1 đến 1000;
+    // for(i = 0; i < 1000; i++) {
+    //     document.write(i +'<br>')
+    // }
+
+    // 18. In ra cac số từ a đến b;
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+
+    // for(i = a; i <= b; i++) {
+    //     document.write(i +'<br>')
+    // }
+    
+    // 19. In ra cac số từ a đến b, mỗi số trong 1 thẻ <h1>;
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+
+    // for(i = a; i <= b; i++) {
+    //     document.write('<h1>'+ i +'</h1>')
+    // }
+
+    // 20. In ra các số chẵn tu a đến b;
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+
+    // for(i = a; i <= b; i++) {
+    //     if (i%2===0) {
+    //         document.write(i +'<br>')
+    //     }
+    // }
+
+    // 21. In ra các số từ a đến b số chẵn trong h2, so le trong h1;
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+
+    // for(i = a; i <= b; i++) {
+    //     if (i%2!==0) {
+    //         document.write('<h1>'+ i +'</h1>')
+    //     } else {
+    //         document.write('<h2>'+ i +'</h2>')
+    //     }
+    // }
+
+    // 22. Tính tích.
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+    // let c = 1
+    // for(i = a; i <= b; i++) {
+    //     c *= i
+    // }
+    // document.write(c) 
+
+    // 23. Tính Tổng các số chia 5 dư 2 từ a đến b.
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+    // let c = 0
+    // for(i = a; i <= b; i++) {
+    //     if (i%5===2) {
+    //         c += i
+    //     }
+    // }
+    // document.write(c) 
+
+    // 24. Đếm các số chia 5 dư 2 từ a đến b
+    // let a = +prompt('Nhap a:')
+    // let b = +prompt('Nhap b:')
+    // let c = 0
+    // for(i = a; i <= b; i++) {
+    //     if (i%5===2) {
+    //         c ++
+    //     }
+    // }
+    // document.write(c) 
+
+    // 25. In ra các phần tử trong mảng
+    // let arr = [1, 2, 3, 4]
+    // let result = ''
+    // for (i = 0; i < arr.length; i++) {
+    //     result +=arr[i]
+    // }
+    // document.write(result)
+
+    // 26. In ra các phần tử chẵn trong mảng;
+    // let arr = [1, 2, 3, 4]
+    // let result = ''
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 === 0) {
+    //         result += arr[i]
+    //     }
+    // }
+    // document.write(result)
+
+    // 27. In ra các phần số chẵn trong h2, le trong h1;
+    // let arr = [1, 2, 3, 4]
+    // let result = ''
+    // let resultw = ''
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 === 0) {
+    //         result += arr[i] + ','
+    //     }else {
+    //         resultw += arr[i]+ ','
+    //     }
+    // }
+    // document.write('<h2>' +result+ '</h2>')
+    // document.write('<h1>' +resultw+ '</h1>')
+
+    // 28. Tính tích các phần tử.
+    // let arr = [1, 2, 3, 4]
+    // let result = 1
+    // for (i = 0; i < arr.length; i++) {
+    //     result *= arr[i]
+    // }
+    // document.write(result)
+
+    // 29. Tính tích các phần tử chẵn
+    // let arr = [1, 2, 3, 4]
+    // let result = 1
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 ===0) {
+    //         result *= arr[i]
+    //     }
+    // }
+    // document.write(result)
+
+    // 30. Tính Tổng các phần tử.
+    // let arr = [1, 2, 3, 4]
+    // let result = 0
+    // for (i = 0; i < arr.length; i++) {
+    //     result += arr[i]
+    // }
+    // document.write(result)
+
+    // 31. Tính Tổng các phần tử chẵn
+    // let arr = [1, 2, 3, 4]
+    // let result = 0
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 ===0) {
+    //         result += arr[i]
+    //     }
+    // }
+    // document.write(result)
+
+    // 32. Tìm max trong mảng.
+    // let arr = [1, 2, 3, 4]
+    // let max = arr[0]
+    // for (i = 0; i < arr.length; i++) {
+    //     if (max < arr[i]) {
+    //         max = arr[i]
+    //     }
+    // }
+    // document.write(max)
+
+    // 33. Tìm max của các phần tử chẵn trong mảng
+    // let arr = [1, 2, 3, 4, 6, 7]
+    // let max = arr[0]
+    // for (i = 0; i < arr.length; i++) {
+    //     if (max < arr[i] && arr[i] % 2 ===0) {
+    //         max = arr[i]
+    //     }
+    // }
+    // document.write(max)
+
+    // 34. Đếm có  bao nhiêu phần tử chia 5 dư 2 trong mảng
+    // let arr = [1, 2, 3, 4, 6, 7]
+    // let dem = 0
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 5 === 2) {
+    //         dem++
+    //     }
+    // }
+    // document.write(dem)
+
+    // 35. Nhap vào a, đếm số lượng a trong mảng.
+    // let arr = [1, 2, 3, 4, 6, 7]
+    // let a = prompt('nhap 1 so')
+
+    // let dem = 1
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] === a) {
+    //         dem++
+    //     }
+    // }
+    // document.write(dem)
+
+    // 36. Nhap vao a, tim vi tri cua a trong mảng.
+    // let arr = [1, 2, 3, 4, 6, 7]
+    // let a = +prompt('nhap 1 so')
+
+    // for (i = 0; i < arr.length; i++) {
+    //     if (arr[i] === a) {
+    //         document.write("Tìm thấy số " + a + " tại vị trí: " + i);
+    //         break
+    //     }
+    // }
+
+
+    
+
+
+
+
+
+
+
+</script>
+</html>
