@@ -9,20 +9,29 @@
     <textarea name="" id="display" cols="30" rows="10"></textarea>
 </body>
 <script>
-    let arr = [
-    [1, 3, 5, 7],
-    [2, 4, 6, 8],
-    [3, 6, 9, 12],
-    [4, 8, 12, 16]
-]
-let j = 0
-let newarr = []
-for( let i = 0; i < arr.length; i++) {
-    if (i === j) {
-        newarr.push(arr[i][j]) 
-        j++
-    }
-}
-document.write(newarr)
+            let fixedText = "Hello, World!";
+            let currentIndex = 0;
+            
+            document.onkeydown = (event) => {
+                let a = document.getElementById('display')
+                if(currentIndex < fixedText.length) {
+                    a.textContent += fixedText[currentIndex]
+                    currentIndex++
+                } else {
+                    a.textContent = ''
+                    currentIndex = 0
+                }
+            }
+            // document.addEventListener('keydown', (event) => {
+            //     let displayElement = document.getElementById('display');
+            //     if (currentIndex < fixedText.length) {
+            //         displayElement.textContent += fixedText[currentIndex];
+            //         currentIndex++;
+            //     } else {
+            //         displayElement.textContent = "";
+            //         currentIndex = 0;
+            //     }
+            // });
+            
 </script>
 </html>
