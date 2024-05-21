@@ -12,11 +12,10 @@
             let fixedText = "Hello, World!";
             let currentIndex = 0;
             
-            document.onkeydown = (event) => {
+            document.onkeydown = (e) => {
                 let a = document.getElementById('display')
-                if(currentIndex < fixedText.length) {
+                if (currentIndex < fixedText.length) {
                     a.textContent += fixedText[currentIndex]
-                    currentIndex++
                 } else {
                     a.textContent = ''
                     currentIndex = 0
